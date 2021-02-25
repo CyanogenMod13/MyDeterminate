@@ -31,15 +31,15 @@ public class Determinate {
 
     public Determinate getMinor(int i, int j) {
         double data[][] = new double[getOrder() - 1][getOrder() - 1];
-        int i1 = 0, j2 = 0;
+        int datai = 0, dataj = 0;
         for (int k = 0; k < getOrder(); k++) {
             if (i == k) continue;
             for (int l = 0; l < getOrder(); l++) {
                 if (j == l) continue;
-                data[i1][j2++] = get(k, l);
+                data[datai][dataj++] = get(k, l);
             }
-            i1++;
-            j2 = 0;
+            datai++;
+            dataj = 0;
         }
         return new Determinate(data);
     }
