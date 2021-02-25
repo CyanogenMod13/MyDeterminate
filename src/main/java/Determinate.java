@@ -29,13 +29,13 @@ public class Determinate {
         return (int) Math.pow(-1, i + j);
     }
 
-    public Determinate getMinor(int i, int j) {
+    public Determinate getMinor(int minori, int minorj) {
         double data[][] = new double[getOrder() - 1][getOrder() - 1];
         int datai = 0, dataj = 0;
         for (int k = 0; k < getOrder(); k++) {
-            if (i == k) continue;
+            if (minori == k) continue;
             for (int l = 0; l < getOrder(); l++) {
-                if (j == l) continue;
+                if (minorj == l) continue;
                 data[datai][dataj++] = get(k, l);
             }
             datai++;
